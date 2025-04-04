@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemCompra"
+        android:icon="@mipmap/compra"
+        android:title="COMPRAS"/>
+    <item
+        android:id="@+id/itemVenta"
+        android:icon="@mipmap/venta"
+        android:title="VENTA"/>
+
+</menu>

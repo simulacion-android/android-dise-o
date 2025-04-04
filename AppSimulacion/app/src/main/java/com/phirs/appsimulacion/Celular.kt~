@@ -1,0 +1,18 @@
+package com.phirs.appsimulacion
+
+import java.io.Serializable
+
+data class Celular(
+    val id: String,
+    val modelo: String,
+    val estado: EstadoCelular,
+    val almacenamiento: String,
+    val ram: String,
+    val procesador: String,
+    val descripcion: String,
+    val precio: Double
+) : Serializable
+
+enum class EstadoCelular {
+    REACONDICIONADO, REPARADO, USADO, NUEVO
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Barra de búsqueda -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBuscarItem"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:hint="Buscar Dispositivo..."
+        app:hintTextColor="@color/black"
+        android:textColorHint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBuscarItem"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- <Button
+        android:id="@+id/btnBuscarItem"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/logo"
+        android:layout_marginTop="8dp"
+        android:text="BUSCAR"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/> -->
+
+    <!-- Lista de ítems de simulación -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemsSimulacion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_celular" />
+
+    <!-- Resumen de simulación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Total simulación: $0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btnSimular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Confirmar Compra"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/logo"
+            android:layout_gravity="center"
+            android:enabled="false"
+            style="@style/Widget.MaterialComponents.Button"/>
+    </LinearLayout>
+</LinearLayout>

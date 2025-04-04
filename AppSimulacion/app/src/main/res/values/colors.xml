@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="logo">#99cccf</color>
+    <color name="spyxfamily">#7f9b8f</color>
+    <color name="spylite">#93a097</color>
+    <color name="azul_claro">#94B3C6</color>
+    <color name="mushoku8">#9a9a9c</color>
+    <color name="mushoku19">#bd3041</color>
+    <color name="mushoku20">#a5a2ca</color>
+    <color name="mushoku20.1">#7F7DA4</color>
+    <color name="rojosangre">#6f0509</color>
+    <color name="verde">#589455</color>
+    <color name="febrero">#F39FCD</color>
+    <color name="flores">#F3E0AD</color>
+    <color name="amarillo">#D6C133</color>
+    <color name="eevee">#eaac60</color>
+    <color name="eevee2">#f6e6a9</color>
+    <color name="sylphy">#fef6ea</color>
+    <color name="eeveeprincipal">#d5d6c6</color>
+    <color name="bakugo">#FF8A65</color>
+    <color name="gray">#EDEDED</color>
+    <color name="teal_700">#018786</color>
+    <color name="purple_500">#6002E8</color>
+</resources>

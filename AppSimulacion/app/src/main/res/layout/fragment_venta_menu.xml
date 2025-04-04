@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/modeskatrial_bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Vende tu celular"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Card para información básica -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/logo"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/logo"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Marca -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColorHint="@color/black"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Marca">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMarca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Modelo del dispositivo -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColorHint="@color/black"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Modelo del celular">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etModelo"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Año de fabricación -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColorHint="@color/black"
+                    android:hint="Año de fabricación">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAnio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para la condicion del dispositivo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/logo"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Uso del dispositivo:"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgCondicion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbNuevo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nuevo (menos de 1 semana de uso)"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbUSemiNuevo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Semi Nuevo (mas de 3 meses de uso)"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbUsado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Usado (mas de 6 meses de uso)"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rbMuyUsado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Muy Usado (mas de 1 año de uso)"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para estado del dispositivo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/logo"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estado del dispositivo:"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbBueno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buen estado (pequeños rasguños)"
+                        android:fontFamily="@font/modeskatrial_bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estado regular (señales de uso visible)"
+                        android:fontFamily="@font/modeskatrial_bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbMalo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dañado (funciona pero con problemas)"
+                        android:fontFamily="@font/modeskatrial_bold"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card para accesorios -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/logo"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Incluye accesorios originales?"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbCargador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cargador original"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbAudifonos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Audífonos originales"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbCaja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Caja original"
+                    android:fontFamily="@font/modeskatrial_bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón de cotización -->
+        <Button
+            android:id="@+id/btnCotizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="Obtener cotización"
+            android:textAllCaps="false"
+            android:fontFamily="@font/modeskatrial_bold"
+            android:textSize="16sp"/>
+
+        <!-- Resultado de la cotización -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvCotizacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/modeskatrial_bold"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botón de confirmar venta -->
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar venta"
+            android:textAllCaps="false"
+            android:fontFamily="@font/modeskatrial_bold"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>
